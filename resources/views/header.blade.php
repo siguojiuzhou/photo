@@ -3,7 +3,7 @@
         <div class="logo fl"><a href="https://www.ku137.net/" title="">图片吧</a></div>
         <div class="nav fl">
             <ul class="cl">
-                <li><a href="https://www.ku137.net/" title="美女写真">首页</a></li>
+                <li><a href="./images/icon.png" title="美女写真">首页</a></li>
                 <li><a href="{{ url('/latest') }}" title="最新套图">最新</a></li>
                 <li><a href="{{ url('/tag') }}" title="标签分类">标签分类</a></li>
             </ul>
@@ -12,9 +12,9 @@
             <div class="search fl">
                 <div class="search-show">
                     <div class="search-box">
-                        <form method="get" action="https://www.ku137.net/plus/search.php" class="new-searching-unit" data-regestered="regestered">
+                        <form method="get" action="{{ url('/search') }}" class="new-searching-unit" data-regestered="regestered">
                             <input type="text" size="27" name="q" autocomplete="off" placeholder="" value="">
-                            <a href="https://www.ku137.net/#" title="" class="go"><input style="width:30px;height:30px;" type="submit" value=""></a>
+                            <a href="{{ url('/#') }}" title="" class="go"><input style="width:30px;height:30px;" type="submit" value=""></a>
                         </form>
                     </div>
                 </div>

@@ -25,7 +25,7 @@
 <!--top-->
 <div class="top">
 
-	@extends('header')
+	@include('header')
 
 	<div class="tit">
 		<div class="w1200">
@@ -76,7 +76,7 @@
 	</div>
 </div>
 <!--end-->
-	@extends('footer')
+	@include('footer')
 
 <div style="display:none;"><script type="text/javascript">tongji()</script><script type="text/javascript" src="./美女写真网 - 专注分享高清美女图片、明星图片等精美图片大全_files/z_stat.php"></script><script src="./美女写真网 - 专注分享高清美女图片、明星图片等精美图片大全_files/core.php" charset="utf-8" type="text/javascript"></script><a href="https://www.cnzz.com/stat/website.php?web_id=1277647049" target="_blank" title="站长统计">站长统计</a>
 </div>

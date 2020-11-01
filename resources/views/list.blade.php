@@ -13,11 +13,11 @@
     <meta name="keywords" content="MiiTao蜜桃社套图,MiiTao蜜桃社图片,MiiTao蜜桃社下载" />
     <meta name="description" content="MiiTao蜜桃社是美女聚集首选之地,各款海量美女一顾倾城,倚姣作媚。更是汇集了国内各大超级绝世美模,个个有着美丽的容颜和魔鬼般的身材,让你过目不忘。" />
     <link rel="shortcut icon" href="https://www.ku137.net/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
     <link rel="canonical" href="https://m.ku137.net/b/86/" />
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <script type="text/javascript" src="../js/public.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <script type="text/javascript" src="../../js/public.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
     <script type="text/javascript">
         var ubr = navigator.userAgent.toLowerCase();
         if(ubr.indexOf('mobile') > -1){top.location.href = 'https://m.ku137.net/b/86/';}
@@ -25,7 +25,7 @@
 </head>
 <body>
 <div class="header h-pub">
-    @extends('header')
+    @include('header')
 </div>
 
 <div class="position">
@@ -65,6 +65,6 @@
 </div>
 
 
-@extends('footer')
+@include('footer')
 </body>
 </html>

@@ -21,7 +21,7 @@
 </head>
 <body>
 <div class="header h-pub">
-    @extends('header')
+    @include('header')
 </div>
 
 <div class="position">
@@ -153,6 +153,6 @@
 </div>
 
 
-@extends('footer')
+@include('footer')
 </body>
 </html>

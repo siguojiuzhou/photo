@@ -36,8 +36,10 @@ class SingleController extends Controller
         ]);
     }
 
-    public function single($id)
+    public function single($id, Request $request)
     {
+//        $page = $request->input('page');
+
         $result = Cover::query()->where('id', $id)->select(['*'])->first();
 
         $zip = new \ZipArchive();
@@ -50,6 +52,7 @@ class SingleController extends Controller
             }
         }
         $zip->close();
+//        var_dump($filesInside,$result);exit;
 
         return view('single')->with([
             'list' => $filesInside,
@@ -68,7 +71,20 @@ class SingleController extends Controller
 
     public function tag()
     {
-        return view('tag');
+        $list = Cover::query()->selectRaw('`column_id`,`column`,count(*) as num')->groupBy('column_id','column')->get();
+//        var_dump($list);
+
+        return view('tag')->with([
+            'list' => $list
+        ]);
     }
 
+    public function latest()
+    {
+        $list = Cover::query()->select(['*'])->orderByDesc('id')->paginate(25);
+
+        return view('latest')->with([
+            'list' => $list
+        ]);
+    }
 }

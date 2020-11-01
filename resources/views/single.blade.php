@@ -24,7 +24,7 @@
 </head>
 <body>
 <div class="header h-pub">
-    @extends('header')
+    @include('header')
 </div>
 
 <div class="position">
@@ -61,61 +61,23 @@
 
 <div class="channel c-pub">
     <div class="w1200">
-        <h2>YOUMI尤蜜荟相关推荐</h2>
+        <h2>{{$info->coulumn}}相关推荐</h2>
         <div class="m-list">
             <ul class="cl">
 
-                <li><a href="https://www.ku137.net/b/94/33126.html" title="[尤蜜荟] 2018.11.23 Vol.240 Egg_尤妮丝" target="_blank">
-                        <img style="width:224px;height:322px;" src="https://img.ku137.net/piccc/2019/img/190517/17053547-02Z7.jpg" alt="[尤蜜荟] 2018.11.23 Vol.240 Egg_尤妮丝">
-                        <div class="list-tit"><p>[尤蜜荟] 2018.11.23 Vol.240 Egg_尤妮丝</p></div>
+                @foreach($list as $item)
+                <li><a href="{{ url('/single/'.$info->id) }}" title="{{$info->title}}" target="_blank">
+                        <img style="width:224px;height:322px;" src="{{$info->front_cover}}" alt="{{$info->title}}">
+                        <div class="list-tit"><p>{{$info->title}}</p></div>
                     </a></li>
-
-
-                <li><a href="https://www.ku137.net/b/94/36161.html" title="[尤蜜荟] 2019.10.10 Vol.353 Cris_卓娅祺" target="_blank">
-                        <img style="width:224px;height:322px;" src="https://img.ku137.net/piccc/2019/img/191122/22145G4-0L96.jpg" alt="[尤蜜荟] 2019.10.10 Vol.353 Cris_卓娅祺">
-                        <div class="list-tit"><p>[尤蜜荟] 2019.10.10 Vol.353 Cris_卓娅祺</p></div>
-                    </a></li>
-                <li><a href="https://www.ku137.net/b/94/39283.html" title="[尤蜜荟] 2020.07.16 NO.487 Angela小热巴" target="_blank">
-                        <img style="width:224px;height:322px;" src="https://img.ku137.net/piccc/2020/img/200912/12122143-0AV.jpg" alt="[尤蜜荟] 2020.07.16 NO.487 Angela小热巴">
-                        <div class="list-tit"><p>[尤蜜荟] 2020.07.16 NO.487 Angela小热巴</p></div>
-                    </a></li>
-                <li><a href="https://www.ku137.net/b/94/39388.html" title="[尤蜜荟] 2020.07.23 NO.492 潘琳琳ber" target="_blank">
-                        <img style="width:224px;height:322px;" src="https://img.ku137.net/piccc/2020/img/200922/22164428-05E7.jpg" alt="[尤蜜荟] 2020.07.23 NO.492 潘琳琳ber">
-                        <div class="list-tit"><p>[尤蜜荟] 2020.07.23 NO.492 潘琳琳ber</p></div>
-                    </a></li>
-                <li><a href="https://www.ku137.net/b/94/32940.html" title="[尤蜜荟] 2017.06.29 Vol.052 土肥圆矮挫穷" target="_blank">
-                        <img style="width:224px;height:322px;" src="https://img.ku137.net/piccc/2019/img/190517/17052508-021R.jpg" alt="[尤蜜荟] 2017.06.29 Vol.052 土肥圆矮挫穷">
-                        <div class="list-tit"><p>[尤蜜荟] 2017.06.29 Vol.052 土肥圆矮挫穷</p></div>
-                    </a></li>
-                <li><a href="https://www.ku137.net/b/94/37116.html" title="[尤蜜荟] 2019.12.18 Vol.389 周于希Sandy" target="_blank">
-                        <img style="width:224px;height:322px;" src="https://img.ku137.net/piccc/2020/img/200212/121Z629-03150.jpg" alt="[尤蜜荟] 2019.12.18 Vol.389 周于希Sandy">
-                        <div class="list-tit"><p>[尤蜜荟] 2019.12.18 Vol.389 周于希Sandy</p></div>
-                    </a></li>
-                <li><a href="https://www.ku137.net/b/94/35499.html" title="[尤蜜荟] 2019.08.19 Vol.339 Emily顾奈奈" target="_blank">
-                        <img style="width:224px;height:322px;" src="https://img.ku137.net/piccc/2019/img/190912/12133103-0B56.jpg" alt="[尤蜜荟] 2019.08.19 Vol.339 Emily顾奈奈">
-                        <div class="list-tit"><p>[尤蜜荟] 2019.08.19 Vol.339 Emily顾奈奈</p></div>
-                    </a></li>
-                <li><a href="https://www.ku137.net/b/94/37538.html" title="[尤蜜荟] 2020.01.14 Vol.405 果儿Victoria" target="_blank">
-                        <img style="width:224px;height:322px;" src="https://img.ku137.net/piccc/2020/img/200322/22134100-04H1.jpg" alt="[尤蜜荟] 2020.01.14 Vol.405 果儿Victoria">
-                        <div class="list-tit"><p>[尤蜜荟] 2020.01.14 Vol.405 果儿Victoria</p></div>
-                    </a></li>
-                <li><a href="https://www.ku137.net/b/94/32892.html" title="[尤蜜荟] 2016.12.30 Vol.004 周琰琳LIN" target="_blank">
-                        <img style="width:224px;height:322px;" src="https://img.ku137.net/piccc/2019/img/190517/17052201-0W07.jpg" alt="[尤蜜荟] 2016.12.30 Vol.004 周琰琳LIN">
-                        <div class="list-tit"><p>[尤蜜荟] 2016.12.30 Vol.004 周琰琳LIN</p></div>
-                    </a></li>
-                <li><a href="https://www.ku137.net/b/94/36336.html" title="[尤蜜荟] 2019.08.01 VOL.334 黑丝的蕾丝制_服与精致内衣下 筱慧" target="_blank">
-                        <img style="width:224px;height:322px;" src="https://img.ku137.net/piccc/2019/img/191202/02164642-01295.jpg" alt="[尤蜜荟] 2019.08.01 VOL.334 黑丝的蕾丝制_服与精致内衣下 筱慧">
-                        <div class="list-tit"><p>[尤蜜荟] 2019.08.01 VOL.334 黑丝的蕾丝制_服与精致内衣下 筱慧</p></div>
-                    </a></li>
+                @endforeach
 
             </ul>
         </div>
     </div>
 </div>
 
-
-
-@extends('footer')
+@include('footer')
 
 </body>
 </html>
