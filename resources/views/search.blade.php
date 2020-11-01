@@ -14,10 +14,10 @@
     <meta name="keywords" content="美女" />
     <meta name="description" content="美女" />
     <link rel="shortcut icon" href="https://www.ku137.net/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://www.ku137.net/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <link rel="canonical" href="https://m.ku137.net" />
-    <script type="text/javascript" src="https://www.ku137.net/js/public.js"></script>
-    <script type="text/javascript" src="https://www.ku137.net/js/common.js"></script>
+    <script type="text/javascript" src="/js/public.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
 </head>
 <body>
 <div class="header h-pub">

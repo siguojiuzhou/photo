@@ -13,10 +13,10 @@
     <meta name="keywords" content="[尤蜜荟] 2020.08.26 NO.515 妲己_Toxic" />
     <meta name="description" content="【[尤蜜荟] 2020.08.26 NO.515 妲己_Toxic】是美女写真网（www.ku137.com）专门为您收集的YOUMI尤蜜荟，我们还为您准备了海量YOUMI尤蜜荟，如果您喜欢我们的图片，请收藏并持续关注我们。" />
     <link rel="shortcut icon" href="https://www.ku137.net/favicon.ico" type="image/x-icon" />
-    <link href="../css/ku.css" rel="stylesheet" media="screen" type="text/css" />
+    <link href="/css/ku.css" rel="stylesheet" media="screen" type="text/css" />
     <link rel="canonical" href="https://m.ku137.net/b/94/39676.html" />
-    <script src="../js/jquery.js" type="text/javascript"></script>
-    <script src="../js/common.js" type="text/javascript"></script>
+    <script src="/js/jquery.js" type="text/javascript"></script>
+    <script src="/js/common.js" type="text/javascript"></script>
     <script type="text/javascript">
         var ubr = navigator.userAgent.toLowerCase();
         if(ubr.indexOf('mobile') > -1){top.location.href = 'https://m.ku137.net/b/94/39676.html';}

@@ -11,11 +11,11 @@
 	<meta name="keywords" content="美女写真网,美女图片,高清图片,图片大全,明星图片">
 	<meta name="description" content="美女写真网旨在分享美女图片、明星图片、唯美图片等高清精美图片大全，我们以专注分享高质量图片为宗旨，立志成为国内最强大的高清图片网站，为广大摄影爱好者提供服务。">
 	<link rel="shortcut icon" href="https://www.ku137.net/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="./css/ku.css">
+	<link rel="stylesheet" href="/css/ku.css">
 	<link rel="canonical" href="https://www.ku137.net/">
-	<script type="text/javascript" src="./js/common.js"></script>
-	<script type="text/javascript" src="./js/jquery.js"></script>
-	<script type="text/javascript" src="./js/js.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/js.js"></script>
 	<script type="text/javascript">
 		var ubr = navigator.userAgent.toLowerCase();
 		if(ubr.indexOf('mobile') > -1){top.location.href = 'https://m.ku137.net/';}
