@@ -38,44 +38,47 @@
 
 
 
-<div class="link2"><script type="text/javascript">neirong_1()</script></div>
-<div class="Title111"><h1>所属栏目：<a href="https://www.ku137.net/b/94/" title="YOUMI尤蜜荟打包下载">YOUMI尤蜜荟</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下载地址：<a href='https://xz.ku137.net/piccc/2020/zip/201022/545016033642338367.zip' target='_blank'>点击打包下载本套图</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在线视频：<script type="text/javascript">wuduo3()</script></h1></div><br />
+{{--<div class="link2"><script type="text/javascript">neirong_1()</script></div>--}}
+{{--<div class="Title111"><h1>所属栏目：<a href="https://www.ku137.net/b/94/" title="YOUMI尤蜜荟打包下载">YOUMI尤蜜荟</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下载地址：<a href='https://xz.ku137.net/piccc/2020/zip/201022/545016033642338367.zip' target='_blank'>点击打包下载本套图</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在线视频：<script type="text/javascript">wuduo3()</script></h1></div><br />--}}
 
-<div class="link2"><script type="text/javascript">neirong_2()</script></div>
+{{--<div class="link2"><script type="text/javascript">neirong_2()</script></div>--}}
 <div class="content">
     @foreach($list as $item)
 
-        <img src="{{ url('/files/'.$item) }}" alt="{{$info->title}}" class="tupian_img">
+        <img src="{{ url($item) }}" alt="{{$info->title}}" class="tupian_img">
     @endforeach
 
 
 </div>
 
-<div class="page"><a>共9页: </a><a class="no-page page-prev">上一页</a><a class="this-page">1</a><a href='39676_2.html'>2</a><a href='39676_3.html'>3</a><a href='39676_4.html'>4</a><a href='39676_5.html'>5</a><a href='39676_6.html'>6</a><a href='39676_7.html'>7</a><a href='39676_8.html'>8</a><a href='39676_9.html'>9</a><a href='39676_2.html'>下一页</a></div>
+{{--<div class="page"><a>共9页: </a><a class="no-page page-prev">上一页</a><a class="this-page">1</a><a href='39676_2.html'>2</a><a href='39676_3.html'>3</a><a href='39676_4.html'>4</a><a href='39676_5.html'>5</a><a href='39676_6.html'>6</a><a href='39676_7.html'>7</a><a href='39676_8.html'>8</a><a href='39676_9.html'>9</a><a href='39676_2.html'>下一页</a></div>--}}
+<div style="text-align: center">
+    {{ $list->render() }}
+</div>
 
-<div class="center"><script>neirong_3()</script></div>
-<div class="center"><script>neirong_4()</script></div>
+{{--<div class="center"><script>neirong_3()</script></div>--}}
+{{--<div class="center"><script>neirong_4()</script></div>--}}
 <div class="clear"></div>
 </div>
 </div>
 
-<div class="channel c-pub">
-    <div class="w1200">
-        <h2>{{$info->coulumn}}相关推荐</h2>
-        <div class="m-list">
-            <ul class="cl">
+{{--<div class="channel c-pub">--}}
+    {{--<div class="w1200">--}}
+        {{--<h2>{{$info->coulumn}}相关推荐</h2>--}}
+        {{--<div class="m-list">--}}
+            {{--<ul class="cl">--}}
 
-                @foreach($list as $item)
-                <li><a href="{{ url('/single/'.$info->id) }}" title="{{$info->title}}" target="_blank">
-                        <img style="width:224px;height:322px;" src="{{$info->front_cover}}" alt="{{$info->title}}">
-                        <div class="list-tit"><p>{{$info->title}}</p></div>
-                    </a></li>
-                @endforeach
+                {{--@foreach($list as $item)--}}
+                {{--<li><a href="{{ url('/single/'.$info->id) }}" title="{{$info->title}}" target="_blank">--}}
+                        {{--<img style="width:224px;height:322px;" src="{{$info->front_cover}}" alt="{{$info->title}}">--}}
+                        {{--<div class="list-tit"><p>{{$info->title}}</p></div>--}}
+                    {{--</a></li>--}}
+                {{--@endforeach--}}
 
-            </ul>
-        </div>
-    </div>
-</div>
+            {{--</ul>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</div>--}}
 
 @include('footer')
 

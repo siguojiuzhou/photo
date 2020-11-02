@@ -42,16 +42,30 @@ class SingleController extends Controller
 
         $result = Cover::query()->where('id', $id)->select(['*'])->first();
 
-        $zip = new \ZipArchive();
-        $zip->open('./files/123.zip');
-        $filesInside = [];
+        //图片路径
+        preg_match('/piccc(.*?)(.zip)$/', $result->download_url, $url);
+        $url = str_replace('.zip', '', $url[0]);
+        $imgPath = str_replace('zip', 'img', $url);
 
-        for ($i = 0; $i < $zip->numFiles; $i++) {
-            if ( preg_match('/\\S+\.(jpg|gif|bmp|bnp|png)/', $zip->getNameIndex($i)) ) {
-                array_push($filesInside, $zip->getNameIndex($i));
+        $files = scandir('./images/single/'.$imgPath);
+
+        $filesInside = [];
+        foreach ($files as $item) {
+            if ( preg_match('/\\S+\.(jpg|gif|bmp|bnp|png)/', $item) ) {
+                array_push($filesInside, '/images/single/'.$imgPath.'/'.$item);
             }
         }
-        $zip->close();
+
+//        $zip = new \ZipArchive();
+//        $zip->open('./files/123.zip');
+//        $filesInside = [];
+//
+//        for ($i = 0; $i < $zip->numFiles; $i++) {
+//            if ( preg_match('/\\S+\.(jpg|gif|bmp|bnp|png)/', $zip->getNameIndex($i)) ) {
+//                array_push($filesInside, $zip->getNameIndex($i));
+//            }
+//        }
+//        $zip->close();
 //        var_dump($filesInside,$result);exit;
 
         return view('single')->with([
