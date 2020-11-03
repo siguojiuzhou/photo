@@ -87,7 +87,7 @@ class SingleController extends Controller
 
     public function list($columnId)
     {
-        $list = Cover::query()->where('column_id', $columnId)->select(['*'])->orderByDesc('id')->paginate(25);
+        $list = Cover::query()->where('is_down',1)->where('column_id', $columnId)->select(['*'])->orderByDesc('id')->paginate(25);
 
         return view('list')->with([
             'list' => $list
@@ -96,7 +96,7 @@ class SingleController extends Controller
 
     public function tag()
     {
-        $list = Cover::query()->selectRaw('`column_id`,`column`,count(*) as num')->groupBy('column_id','column')->get();
+        $list = Cover::query()->where('is_down',1)->selectRaw('`column_id`,`column`,count(*) as num')->groupBy('column_id','column')->get();
 //        var_dump($list);
 
         return view('tag')->with([
@@ -106,7 +106,7 @@ class SingleController extends Controller
 
     public function latest()
     {
-        $list = Cover::query()->select(['*'])->orderByDesc('id')->paginate(25);
+        $list = Cover::query()->where('is_down',1)->select(['*'])->orderByDesc('id')->paginate(25);
 
         return view('latest')->with([
             'list' => $list
