@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.2" />
     <meta name="referrer" content="origin" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta http-equiv="mobile-agent" content="format=html5; url=https://m.ku137.net/b/tag/" />
+    <meta http-equiv="mobile-agent" content="format=html5; url={{ url()->current() }}" />
     <meta name="keywords" content="标签套图,标签图片,标签下载" />
     <meta name="description" content="" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="canonical" href="https://m.ku137.net/b/tag/" />
+    <link rel="canonical" href="{{ url()->current() }}" />
     <script type="text/javascript" src="/js/public.js"></script>
     <script type="text/javascript" src="/js/common.js"></script>
 </head>
@@ -31,7 +31,7 @@
 <div class="list">
     <div class="w1200">
         <div class="l-title">
-            <h1>标签(38491套)</h1>
+            <h1>标签</h1>
 
         </div>
         <div class="l-pub">
