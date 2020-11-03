@@ -46,7 +46,7 @@
                     @foreach($list as $item)
 
                         <li><a href="{{ url('/single/'.$item->id) }}" title="{{$item->title}}" target="_blank">
-                                <img style="width:224px;height:322px;" src="{{$item->front_cover}}" alt="{{$item->title}}">
+                                <img style="width:224px;height:322px;" src="{{'11'.$item->front_cover}}" alt="{{$item->title}}">
                                 <div class="list-tit list-tit-short"><p>{{$item->title}}</p></div>
                                 <span class="time">{{$item->count}}P</span>
                             </a></li>

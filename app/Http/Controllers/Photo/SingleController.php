@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Cover;
 use App\Models\Detail;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 
@@ -38,7 +39,8 @@ class SingleController extends Controller
 
     public function single($id, Request $request)
     {
-//        $page = $request->input('page');
+        $page = $request->input('page', 1);
+        $perPage = 10;
 
         $result = Cover::query()->where('id', $id)->select(['*'])->first();
 
@@ -55,6 +57,15 @@ class SingleController extends Controller
                 array_push($filesInside, '/images/single/'.$imgPath.'/'.$item);
             }
         }
+        $offset = ($page * $perPage) - $perPage;
+
+        $data = new LengthAwarePaginator(
+            array_slice($filesInside, $offset, $perPage, true),
+            count($filesInside),
+            $perPage,
+            $page,
+            ['path' => $request->url(), 'query' => $request->query()]
+            );
 
 //        $zip = new \ZipArchive();
 //        $zip->open('./files/123.zip');
@@ -69,7 +80,7 @@ class SingleController extends Controller
 //        var_dump($filesInside,$result);exit;
 
         return view('single')->with([
-            'list' => $filesInside,
+            'list' => $data,
             'info' => $result
         ]);
     }

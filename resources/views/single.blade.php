@@ -14,6 +14,8 @@
     <meta name="description" content="【[尤蜜荟] 2020.08.26 NO.515 妲己_Toxic】是美女写真网（www.ku137.com）专门为您收集的YOUMI尤蜜荟，我们还为您准备了海量YOUMI尤蜜荟，如果您喜欢我们的图片，请收藏并持续关注我们。" />
     <link rel="shortcut icon" href="https://www.ku137.net/favicon.ico" type="image/x-icon" />
     <link href="/css/ku.css" rel="stylesheet" media="screen" type="text/css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="canonical" href="https://m.ku137.net/b/94/39676.html" />
     <script src="/js/jquery.js" type="text/javascript"></script>
     <script src="/js/common.js" type="text/javascript"></script>
@@ -45,14 +47,14 @@
 <div class="content">
     @foreach($list as $item)
 
-        <img src="{{ url($item) }}" alt="{{$info->title}}" class="tupian_img">
+        <img src="{{ 'ad'.url($item) }}" alt="{{$info->title}}" class="tupian_img">
     @endforeach
 
 
 </div>
 
 {{--<div class="page"><a>共9页: </a><a class="no-page page-prev">上一页</a><a class="this-page">1</a><a href='39676_2.html'>2</a><a href='39676_3.html'>3</a><a href='39676_4.html'>4</a><a href='39676_5.html'>5</a><a href='39676_6.html'>6</a><a href='39676_7.html'>7</a><a href='39676_8.html'>8</a><a href='39676_9.html'>9</a><a href='39676_2.html'>下一页</a></div>--}}
-<div style="text-align: center">
+<div class="page" style="text-align: center">
     {{ $list->render() }}
 </div>
 
