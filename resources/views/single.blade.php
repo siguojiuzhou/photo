@@ -31,7 +31,7 @@
 
 <div class="position">
     <div class="w1200">
-        <span><i></i>当前位置 ：</span> <a href="{{ url('/') }}" title="图片吧">主页</a> > <a href="{{ url('/tag') }}">标签分类</a> > <a href="https://www.ku137.net/b/94/" title="YOUMI尤蜜荟">YOUMI尤蜜荟</a> > [尤蜜荟] 2020.08.26 NO.515 妲己_Toxic
+        <span><i></i>当前位置 ：</span> <a href="{{ url('/') }}" title="图片吧">主页</a> > <a href="{{ url('/tag') }}">标签分类</a> > <a href="{{ url()->current() }}" title="{{$info->column}}">{{$info->column}}</a> > {{$info->title}}
     </div>
 </div>
 
