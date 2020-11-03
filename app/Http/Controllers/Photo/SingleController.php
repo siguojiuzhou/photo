@@ -16,7 +16,7 @@ class SingleController extends Controller
 
     public function index()
     {
-        $list = Cover::query()->select(['*'])->orderByDesc('id')->paginate(40);
+        $list = Cover::query()->where('is_down',1)->select(['*'])->orderByDesc('id')->paginate(40);
 
         $column = [
             ['tag_id'=>9, 'title'=>'XIUREN秀人网', 'name'=>'秀人网'],
