@@ -59,12 +59,13 @@ class SingleController extends Controller
         }
         $offset = ($page * $perPage) - $perPage;
 
+        $path = str_replace('www.', 'pic.', $request->url());
         $data = new LengthAwarePaginator(
             array_slice($filesInside, $offset, $perPage, true),
             count($filesInside),
             $perPage,
             $page,
-            ['path' => $request->url(), 'query' => $request->query()]
+            ['path' => $path, 'query' => $request->query()]
             );
 
 //        $zip = new \ZipArchive();

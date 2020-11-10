@@ -3,7 +3,7 @@
 
 $(function() {
     $(document).ready(function(){
-        $(".content img").attr({title:"点击查看超高清图片"});
+        // $(".content img").attr({title:"点击查看超高清图片"});
     });
 
 
@@ -11,7 +11,7 @@ $(function() {
     $(".tupian_img").click(
         function()
         {
-            window.open("/ku137.html?img="+this.src+"")
+            // window.open("/ku137.html?img="+this.src+"")
         }
     );
 })
