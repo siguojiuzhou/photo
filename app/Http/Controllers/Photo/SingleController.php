@@ -51,28 +51,27 @@ class SingleController extends Controller
 
         $files = scandir('./images/single/'.$imgPath);
 
+        $hostUrl = parse_url($request->url())['host'];
+        //判断有没有带www，有则替换成pic
+        if (strrpos($hostUrl, 'www') === false) {
+            $hostUrl = 'pic.'.$hostUrl;
+        } else {
+            $hostUrl = str_replace('www.', 'pic.', $hostUrl);
+        }
         $filesInside = [];
         foreach ($files as $item) {
             if ( preg_match('/\\S+\.(jpg|gif|bmp|bnp|png)/', $item) ) {
-                array_push($filesInside, '/'.$imgPath.'/'.$item);
+                array_push($filesInside, $hostUrl.'/'.$imgPath.'/'.$item);
             }
         }
         $offset = ($page * $perPage) - $perPage;
 
-        $url = $request->url();
-        $hostUrl = parse_url($url)['host'];
-        //判断有没有带www，有则替换成pic
-        if (strrpos($hostUrl, 'www') === false) {
-            $url = str_replace($hostUrl, 'pic.'.$hostUrl, $url);
-        } else {
-            $url = str_replace('www.', 'pic.', $url);
-        }
         $data = new LengthAwarePaginator(
             array_slice($filesInside, $offset, $perPage, true),
             count($filesInside),
             $perPage,
             $page,
-            ['path' => $url, 'query' => $request->query()]
+            ['path' => $request->url(), 'query' => $request->query()]
             );
 
 //        $zip = new \ZipArchive();
