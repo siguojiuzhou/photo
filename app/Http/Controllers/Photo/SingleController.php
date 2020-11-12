@@ -51,7 +51,9 @@ class SingleController extends Controller
 
         $files = scandir('./images/single/'.$imgPath);
 
-        $hostUrl = parse_url($request->url())['host'];
+        $hostArr = parse_url($request->url());
+        $hostUrl = $hostArr['host'];
+        $hostScheme = $hostArr['scheme'];
         //判断有没有带www，有则替换成pic
         if (strrpos($hostUrl, 'www') === false) {
             $hostUrl = 'pic.'.$hostUrl;
@@ -61,7 +63,7 @@ class SingleController extends Controller
         $filesInside = [];
         foreach ($files as $item) {
             if ( preg_match('/\\S+\.(jpg|gif|bmp|bnp|png)/', $item) ) {
-                array_push($filesInside, $hostUrl.'/'.$imgPath.'/'.$item);
+                array_push($filesInside, $hostScheme.'://'.$hostUrl.'/'.$imgPath.'/'.$item);
             }
         }
         $offset = ($page * $perPage) - $perPage;
