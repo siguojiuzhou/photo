@@ -47,7 +47,7 @@
 <div class="content">
     @foreach($list as $item)
 
-        <img src="{{ url($item) }}" alt="{{$info->title}}" class="tupian_img">
+        <img src="{{ $item }}" alt="{{$info->title}}" class="tupian_img">
     @endforeach
 
 
