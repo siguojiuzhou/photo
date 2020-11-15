@@ -9,17 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.2" />
     <meta name="referrer" content="origin" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta http-equiv="mobile-agent" content="format=html5; url=https://m.ku137.net/b/1/" />
+    <meta http-equiv="mobile-agent" content="format=html5; url={{ url()->current() }}" />
     <meta name="keywords" content="机构套图,机构图片,机构下载" />
     <meta name="description" content="美女套图网为您提供国内外最高人气的美女图片、性感美女，聚集养眼惊艳的国内、日韩、港台等精品美女套图，收集风景图片、唯美图片、动漫图片等图片大全,让您时时刻刻爱上美女套图网。" />
     <link rel="shortcut icon" href="https://www.ku137.net/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="canonical" href="https://m.ku137.net/b/1/" />
-    <script type="text/javascript" src="../js/public.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="canonical" href="{{ url('/') }}" />
+    <script type="text/javascript" src="/js/public.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
     <script type="text/javascript">
-        var ubr = navigator.userAgent.toLowerCase();
-        if(ubr.indexOf('mobile') > -1){top.location.href = 'https://m.ku137.net/b/1/';}
+        // var ubr = navigator.userAgent.toLowerCase();
+        // if(ubr.indexOf('mobile') > -1){top.location.href = 'https://m.ku137.net/b/1/';}
     </script>
 </head>
 <body>

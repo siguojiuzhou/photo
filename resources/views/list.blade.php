@@ -19,8 +19,8 @@
     <script type="text/javascript" src="/js/public.js"></script>
     <script type="text/javascript" src="/js/common.js"></script>
     <script type="text/javascript">
-        var ubr = navigator.userAgent.toLowerCase();
-        if(ubr.indexOf('mobile') > -1){top.location.href = '{{ url()->current() }}';}
+        {{--var ubr = navigator.userAgent.toLowerCase();--}}
+        {{--if(ubr.indexOf('mobile') > -1){top.location.href = '{{ url()->current() }}';}--}}
     </script>
 </head>
 <body>
