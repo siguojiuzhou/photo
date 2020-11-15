@@ -17,8 +17,7 @@
 	<script type="text/javascript" src="/js/jquery.js"></script>
 	<script type="text/javascript" src="/js/js.js"></script>
 	<script type="text/javascript">
-		var ubr = navigator.userAgent.toLowerCase();
-		if(ubr.indexOf('mobile') > -1){top.location.href = '{{ url('/') }}';}
+		
 	</script></head>
 <body>
 
